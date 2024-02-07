@@ -1,0 +1,17 @@
+header {
+    background-color: #24053E;
+}
+
+.container {
+    text-align: center;
+    margin-inline: clamp(1rem, -2.2792rem + 13.9914vw, 10.313rem);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-image {
+    width: clamp(20rem, 100%, 47.9375rem);
+}
