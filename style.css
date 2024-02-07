@@ -1,17 +1,79 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
 header {
     background-color: #24053E;
+    height: 30.0625rem;
 }
 
 .container {
+    height: ;
+    margin-inline: 1rem;
     text-align: center;
-    margin-inline: clamp(1rem, -2.2792rem + 13.9914vw, 10.313rem);
 }
 
 .nav {
+    padding-top: 2rem;
     display: flex;
     justify-content: space-between;
 }
 
-.hero-image {
+.hero {
+    position: relative;
+
+    display: grid;
+    gap: 48px;
+}
+
+.hero__title {
+    font-size: 3.125rem;
+    line-height: 3.125rem;
+    margin-top: 4rem;
+}
+
+.hero__image {
+    position: absolute;
+    top: 22rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    text-align: center;
     width: clamp(20rem, 100%, 47.9375rem);
 }
