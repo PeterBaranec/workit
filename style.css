@@ -1,4 +1,5 @@
 :root {
+
     /* COLORS */
     --clr-primary: hsl(273, 85%, 13%);
     --clr-secondary: hsl(0, 0%, 100%);
@@ -14,8 +15,10 @@
 
     --fw-regular: 400;
     --fw-semi-bold: 600;
+    --fw-bold: 700;
 
-    --ff-headings: 'Fraunces 144'
+    --ff-headings: 'Fraunces', serif;
+    --ff-body: 'Manrope', sans-serif;
 }
 
 
@@ -56,6 +59,9 @@ button {
 body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
+    font-family: var(--ff-body);
+    font-size: var(--fs-200);
+    font-weight: var(--fw-regular);
 }
 
 h1,
@@ -68,7 +74,7 @@ h3 {
 .container {
     width: 90%;
     max-width: 87.5em;
-    margin: auto;
+    margin: 0 auto;
 }
 
 
@@ -87,7 +93,7 @@ h3 {
     position: relative;
     display: block;
     width: calc(283% + 1.3px);
-    height: 112px;
+    height: 123px;
 }
 
 .hero__wave .shape-fill {
@@ -97,29 +103,74 @@ h3 {
 
 /*HEADER*/
 
-header {
-    background-color: var(--clr-primary);
-    height: 37.5em;
-    position: relative;
-}
-
 .flex-flow {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    gap: 2.25rem;
 }
 
-.nav {
+header {
+    background-image: url(./images/bg-pattern-1.svg), url(./images/bg-pattern-2.svg);
+    background-repeat: no-repeat;
+    background-color: var(--clr-primary);
+    height: 37.5rem;
+    position: relative;
+}
+
+
+.header__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 3.5rem
 }
 
+.header__title {
+    font-family: var(--ff-headings);
+    font-weight: var(--fw-semi-bold);
+    font-size: var(--fs-800);
+    color: var(--clr-neutral-white);
+    width: clamp(21.438rem, 15.0119rem + 27.4178vw, 39.688rem);
+    margin-top: 3.9375rem;
+    text-align: center;
+}
 
-.nav__btn {
+.header__underline {
+    text-decoration: underline solid var(--clr-accent) 3px;
+    text-underline-offset: 0.5rem;
+}
+
+.header__btn--secondary {
     color: var(--clr-neutral-white);
     text-underline-offset: 0.5em;
     text-decoration: underline solid var(--clr-accent) 2.5px;
+}
+
+.header__btn--secondary:hover {
+    color: var(--clr-accent);
+}
+
+
+.header__btn--primary {
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    font-weight: var(--fw-bold);
+    color: var(--clr-primary);
+    background-color: var(--clr-accent);
+}
+
+.header__btn--primary:hover {
+    color: var(--clr-accent);
+    background-color: var(--clr-primary);
+    border: 1px solid var(--clr-accent);
+}
+
+.hero-image {
+    z-index: 5;
+    position: absolute;
+    width: clamp(20rem, 10.1627rem + 41.9726vw, 47.9375rem);
+    top: 80%;
+    left: 30%;
 }
