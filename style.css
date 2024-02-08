@@ -1,13 +1,30 @@
+:root {
+    /* COLORS */
+    --clr-primary: hsl(273, 85%, 13%);
+    --clr-secondary: hsl(0, 0%, 100%);
+    --clr-accent: hsl(150, 100%, 63%);
+    --clr-neutral-grey: hsl(271, 12%, 34%);
+    --clr-neutral-white: hsl(276, 100%, 99%);
+
+    /*Typogpraphy*/
+    --fs-200: 1.125rem;
+    --fs-400: 2rem;
+    --fs-600: 3.5rem;
+    --fs-800: 5rem;
+
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+
+    --ff-headings: 'Fraunces 144'
+}
+
+
+/*RESETS*/
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
-}
-
-
-body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
 }
 
 body,
@@ -30,50 +47,79 @@ img {
     display: block;
 }
 
-input,
-button,
-textarea,
-select {
+button {
     font: inherit;
 }
 
+/*GENERAL*/
 
-header {
-    background-color: #24053E;
-    height: 30.0625rem;
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: var(--fw-semi-bold);
 }
 
 .container {
-    height: ;
-    margin-inline: 1rem;
-    text-align: center;
+    width: 90%;
+    max-width: 87.5em;
+    margin: auto;
+}
+
+
+
+/*WAVE SHAPE*/
+.hero__wave {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.hero__wave svg {
+    position: relative;
+    display: block;
+    width: calc(283% + 1.3px);
+    height: 112px;
+}
+
+.hero__wave .shape-fill {
+    fill: #24053D;
+}
+
+
+/*HEADER*/
+
+header {
+    background-color: var(--clr-primary);
+    height: 37.5em;
+    position: relative;
+}
+
+.flex-flow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav {
-    padding-top: 2rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-top: 3.5rem
 }
 
-.hero {
-    position: relative;
 
-    display: grid;
-    gap: 48px;
-}
-
-.hero__title {
-    font-size: 3.125rem;
-    line-height: 3.125rem;
-    margin-top: 4rem;
-}
-
-.hero__image {
-    position: absolute;
-    top: 22rem;
-    left: 0;
-    right: 0;
-    margin-inline: auto;
-    text-align: center;
-    width: clamp(20rem, 100%, 47.9375rem);
+.nav__btn {
+    color: var(--clr-neutral-white);
+    text-underline-offset: 0.5em;
+    text-decoration: underline solid var(--clr-accent) 2.5px;
 }
