@@ -243,9 +243,12 @@ SECTION FEATURES
 .feature__number {
     width: 3.5rem;
     height: 3.5rem;
+
     font-size: 1.5rem;
     font-weight: var(--fw-semi-bold);
+    font-family: var(--ff-headings);
     color: var(--clr-primary);
+
     border: 1px solid var(--clr-neutral-grey);
     border-radius: 50%;
     padding: 1.5rem;
